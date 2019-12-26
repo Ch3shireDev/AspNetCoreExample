@@ -1,0 +1,23 @@
+﻿@using AspNetExample.Models
+@model IEnumerable<AspNetExample.Models.Movie>
+
+@{
+    var movies = (List<Movie>)ViewData["Movies"]; // Cast the list
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<ul>
+    @foreach (var movie in movies)
+    {
+        <li><a href="/movies/@movie.Id">@movie.Title (@movie.ReleaseDate.ToLongDateString())</a></li>
+    }
+</ul>
+<p><a href="..">Go back</a></p>
+</body>
+</html>

@@ -1,0 +1,19 @@
+﻿@model AspNetExample.Models.Movie
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@Model.Title</title>
+</head>
+<body>
+<p>
+    The movie <b>@Model.Title</b> was released @Model.ReleaseDate.ToLongDateString()
+</p>
+<p>
+    <a href="..">Go back</a>
+</p>
+</body>
+</html>
